@@ -4,8 +4,8 @@ var Stack = function(args){
 	var _stack = {};
 	_stack.length = function() {return _length;}
 	_stack.add = function(item){
-		_length++;
 		_list[_length] = item;
+		_length++;
 	}
 	_stack.remove = function(){
 		_length--;
@@ -24,20 +24,19 @@ var Stack = function(args){
 		}
 	}
 	if(args){
-		var len = 0;
-		var i = 0;
-		if(Object.prototype.toString.call(args) === "[object Array]"){
+		var len;
+		var i;
+		if(typeof args === "object" && args.length){
 			len = args.length;
 			for(i = 0; i < len; i++){
 				_stack.add(args[i]);
 			}
 		}else{
 			len = arguments.length;
-			for(var i = 0; i < len; i++){
+			for(i = 0; i < len; i++){
 				_stack.add(arguments[i]);
 			}
 		}
-		
 	}
 	return _stack;
 }

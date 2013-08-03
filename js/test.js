@@ -5,7 +5,7 @@ stackA.add(4613);
 stackA.add("ADG");
 var tp = {title:"yes"};
 var stackB = new Stack();
-stackA.add(tp);
+//stackA.add(tp);
 stackA.add(stackB);
 var testArray = ["test 1",4,{F:"F"}];
 var stackC = new Stack(testArray);
