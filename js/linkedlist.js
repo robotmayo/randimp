@@ -72,6 +72,15 @@ var LinkedList = function(args){
             _ll.push(arr[i]);
         }
     }
+    _ll.nodesAsArray = function(){
+        var ret = [];
+        var node = _first;
+        while(node){
+            ret.push(node.value);
+            node = node.next;
+        }
+        return ret;
+    }
     var Node = function(val){
         this.value = val;
         var next = {};
