@@ -1,4 +1,4 @@
-var LinkedList = function(array){
+var LinkedList = function(args){
     var _ll = {};
     var _first;
     var _last;
@@ -77,6 +77,12 @@ var LinkedList = function(array){
         var next = {};
         var prev = {};
     };
-    if(array){_ll.arrayToList(array);}
+    if(args){
+        if(typeof args === "object" && args.length){
+            _ll.arrayToList(args);
+        }else{
+            _ll.arrayToList(arguments);
+        }
+    }
     return _ll;
 }
